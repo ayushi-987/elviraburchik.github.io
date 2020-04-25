@@ -10,10 +10,9 @@
 }
 
 .avatar {
-    object-fit: cover;
-    flex: 1;
     margin-left: 30px;
     height: 200px;
+    flex: 0 0 auto;
 }
 
 * {
@@ -179,6 +178,19 @@ footer {
 @media(max-width: 600px) {
     .wrapper {
         padding: 40px 20px;
+    }
+    
+    .about-container {
+      -webkit-flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    nav li {
+        margin: 0 15px;
+    }
+    
+    .avatar {
+        margin-left: 0px;
     }
 }
 

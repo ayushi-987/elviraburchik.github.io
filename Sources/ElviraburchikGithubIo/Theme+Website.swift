@@ -32,7 +32,15 @@ public extension Theme {
                         ),
                         .div(
                             .class("about-container"),
-                            .contentBody(index.body),
+                            .div(
+                                .contentBody(index.body),
+                                .forEach((context.site as? PersonalWebsite)!.socialMediaLinks, { link in
+                                    .a(
+                                        .href(link.url),
+                                        .class(link.icon)
+                                    )
+                                })
+                            ),
                             .img(.class("avatar"), .src("photo.png"))
                         )
 //                        .h2("Latest content"),
