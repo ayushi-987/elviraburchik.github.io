@@ -4,7 +4,7 @@
 *  MIT license, see LICENSE file for details
 */
 
-.aboutcontainer {
+.about-container {
   display: -webkit-flex;
   -webkit-flex-wrap: nowrap;
 }
@@ -25,7 +25,8 @@
 body {
     background: #fff;
     color: #000;
-    font-family: Helvetica, Arial;
+    font-family: system-ui, sans-serif;
+    line-height: 1.625;
     text-align: center;
     align-self: center;
 }
@@ -64,7 +65,7 @@ nav {
 
 nav li {
     display: inline-block;
-    margin: 0 7px;
+    margin: 0 30px;
     line-height: 1.5em;
 }
 
@@ -74,7 +75,7 @@ nav li a.selected {
 
 h1 {
     margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 h2 {
@@ -171,7 +172,7 @@ footer {
     }
 
     header {
-        background-color: #000;
+        background-color: #222;
     }
 }
 
@@ -179,4 +180,17 @@ footer {
     .wrapper {
         padding: 40px 20px;
     }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-twitter {
+  background: #FFFFFF;
+  color: white;
 }

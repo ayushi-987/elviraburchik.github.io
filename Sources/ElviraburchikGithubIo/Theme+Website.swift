@@ -17,6 +17,13 @@ public extension Theme {
                 .lang(context.site.language),
                 .head(for: index, on: context.site),
                 .body(
+//                    .div(
+//                        .a(
+//                            .img(.class("fa fa-twitter.png"), .src("fa fa-twitter.png")),
+//                            .href("https://twitter.com/ElviraBurchik"),
+//                            .class("fa fa-twitter.png")
+//                        )
+//                    ),
                     .header(for: context, selectedSection: nil),
                     .wrapper(
                         .h1(
@@ -24,15 +31,15 @@ public extension Theme {
                             .text(context.site.description)
                         ),
                         .div(
-                            .class("aboutcontainer"),
+                            .class("about-container"),
                             .contentBody(index.body),
                             .img(.class("avatar"), .src("photo.png"))
-                        ),
-                        .h2("Latest content"),
-                        .itemList(
-                            for: context.allItems(sortedBy: \.date, order: .descending),
-                            on: context.site
                         )
+//                        .h2("Latest content"),
+//                        .itemList(
+//                            for: context.allItems(sortedBy: \.date, order: .descending),
+//                            on: context.site
+//                        )
                     ),
                     .footer(for: context.site)
                 )
@@ -166,11 +173,16 @@ private extension Node where Context == HTML.BodyContext {
             .wrapper(
                 .if(sectionIDs.count > 1,
                     .nav(
-                        .ul(.forEach(sectionIDs) { section in
+                        .ul(
                             .li(.a(
-                                .class(section == selectedSection ? "selected" : ""),
-                                .href(context.sections[section].path),
-                                .text(context.sections[section].title)
+                                .href("/"),
+                                .text("home")
+                            )),
+                            .forEach(sectionIDs) { section in
+                                .li(.a(
+                                    .class(section == selectedSection ? "selected" : ""),
+                                    .href(context.sections[section].path),
+                                    .text(context.sections[section].title)
                             ))
                         })
                     )
