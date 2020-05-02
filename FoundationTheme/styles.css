@@ -4,7 +4,7 @@
 *  MIT license, see LICENSE file for details
 */
 
-.about-container {
+.flex-container {
   display: -webkit-flex;
   -webkit-flex-wrap: nowrap;
 }
