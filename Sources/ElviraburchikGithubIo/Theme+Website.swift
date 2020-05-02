@@ -17,13 +17,6 @@ public extension Theme {
                 .lang(context.site.language),
                 .head(for: index, on: context.site),
                 .body(
-//                    .div(
-//                        .a(
-//                            .img(.class("fa fa-twitter.png"), .src("fa fa-twitter.png")),
-//                            .href("https://twitter.com/ElviraBurchik"),
-//                            .class("fa fa-twitter.png")
-//                        )
-//                    ),
                     .header(for: context, selectedSection: nil),
                     .wrapper(
                         .h1(
@@ -31,7 +24,7 @@ public extension Theme {
                             .text(context.site.description)
                         ),
                         .div(
-                            .class("about-container"),
+                            .class("flex-container"),
                             .div(
                                 .contentBody(index.body),
                                 .forEach((context.site as? PersonalWebsite)!.socialMediaLinks, { link in

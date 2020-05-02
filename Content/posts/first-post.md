@@ -1,8 +1,8 @@
 ---
 date: 2020-04-24 14:25
-description: A description of my first post.
+description: My first post will be here
 tags: first, article
 ---
-# My first post
+# My first post is coming soon
 
 My first post's text.
