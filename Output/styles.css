@@ -7,6 +7,7 @@
 .flex-container {
   display: -webkit-flex;
   -webkit-flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
 
 .avatar {
@@ -192,17 +193,4 @@ footer {
     .avatar {
         margin-left: 0px;
     }
-}
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fa-twitter {
-  background: #FFFFFF;
-  color: white;
 }

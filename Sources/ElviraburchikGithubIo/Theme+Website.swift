@@ -1,6 +1,7 @@
 import Foundation
 import Publish
 import Plot
+import Ink
 
 public extension Theme {
     static var website: Self {
@@ -26,21 +27,18 @@ public extension Theme {
                         .div(
                             .class("flex-container"),
                             .div(
-                                .contentBody(index.body),
-                                .forEach((context.site as? PersonalWebsite)!.socialMediaLinks, { link in
-                                    .a(
-                                        .href(link.url),
-                                        .class(link.icon)
-                                    )
-                                })
+                                .contentBody(index.body)
                             ),
                             .img(.class("avatar"), .src("photo.png"))
                         )
-//                        .h2("Latest content"),
-//                        .itemList(
-//                            for: context.allItems(sortedBy: \.date, order: .descending),
-//                            on: context.site
-//                        )
+                        /*
+                         Uncomment when posts will appear
+                        .h2("Latest content"),
+                        .itemList(
+                            for: context.allItems(sortedBy: \.date, order: .descending),
+                            on: context.site
+                        )
+                        */
                     ),
                     .footer(for: context.site)
                 )
@@ -55,13 +53,72 @@ public extension Theme {
                 .body(
                     .header(for: context, selectedSection: section.id),
                     .wrapper(
-                        .h1(.text(section.title)),
-                        .itemList(for: section.items, on: context.site)
+                        .if(section.title == "about",
+                            .div(
+                                .contentBody(section.body),
+                                .div(
+                                    .class("flex-container"),
+                                    .raw(markdownText(at: "Content/about/flo.md", context: context) ?? ""),
+                                    .img(.class("avatar"), .src("../flo.jpg"))
+                                ),
+                                .br(),
+                                .h2("Event organization:"),
+                                .header("""
+                                            For some reason, I enjoy encouraging people to share their
+                                            knowledge via public talks much more than speaking by myself, so 👇
+                                        """),
+                                .br(),
+                                .div(
+                                    .class("flex-container"),
+                                    .raw(markdownText(at: "Content/about/mo.md", context: context) ?? ""),
+                                    .img(.class("avatar"), .src("../mo_conf_2019.jpg"))
+                                ),
+                                .br(),
+                                .div(
+                                    .class("flex-container"),
+                                    .raw(markdownText(at: "Content/about/meetups.md", context: context) ?? ""),
+                                    .img(.class("avatar"), .src("../talk.jpg"))
+                                ),
+                                .h2("""
+                                        Public talk (Hope soon I'll replace it with "talks") I've given:
+                                    """),
+                                .raw(markdownText(at: "Content/about/talks.md", context: context) ?? "")
+                            )
+                        )
                     ),
                     .footer(for: context.site)
                 )
             )
         }
+        
+        func markdownText(at path: String, context: PublishingContext<Site>) -> String? {
+            do {
+                let path = Path(path)
+                let file = try context.file(at: path)
+                
+                do {
+                    let content = try file.read()
+                    let parser = MarkdownParser()
+                    let string = String(data: content, encoding: .utf8)!
+                    let html = parser.html(from: string)
+                    return html
+                }
+                catch { return nil }
+            } catch {
+                return nil
+            }
+        }
+        
+//        func floMarkdownText() -> String? {
+//            let file = "flo.md"
+//            guard let fileURL = Bundle.main.url(forResource: "flo", withExtension: "md") else { return nil }
+//            do {
+//                return try String(contentsOf: fileURL, encoding: .utf8)
+//            }
+//            catch {
+//                return nil
+//            }
+//        }
 
         func makeItemHTML(for item: Item<Site>,
                           context: PublishingContext<Site>) throws -> HTML {
