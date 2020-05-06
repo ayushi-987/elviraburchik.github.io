@@ -1,13 +1,6 @@
-/**
-*  Publish Foundation theme
-*  Copyright (c) John Sundell 2019
-*  MIT license, see LICENSE file for details
-*/
-
 .flex-container {
   display: -webkit-flex;
-  -webkit-flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .avatar {
@@ -86,12 +79,24 @@ p {
     margin-bottom: 10px;
 }
 
+.about-image-horizontal {
+    margin-left: 30px;
+    width: 400px;
+    flex: 0 0 auto;
+}
+
 a {
     color: inherit;
 }
 
 .description {
     margin-bottom: 60px;
+}
+
+.about-image-vertical {
+    margin-left: 30px;
+    height: 400px;
+    flex: 0 0 auto;
 }
 
 .item-list > li {
@@ -181,7 +186,7 @@ footer {
         padding: 40px 20px;
     }
     
-    .about-container {
+    .flex-container {
       -webkit-flex-wrap: wrap;
       justify-content: space-around;
     }
