@@ -59,7 +59,7 @@ public extension Theme {
                                 .div(
                                     .class("flex-container"),
                                     .raw(markdownText(at: "Content/about/flo.md", context: context) ?? ""),
-                                    .img(.class("about-image-vertical"), .src("../flo.jpg"))
+                                    .img(.class("about-image-vertical"), .src("flo.jpg"))
                                 ),
                                 .h2("Event organization 🗓️"),
                                 .header("""
@@ -69,19 +69,18 @@ public extension Theme {
                                 .br(),
                                 .div(
                                     .class("flex-container"),
-                                    .raw(markdownText(at: "Content/about/mo.md", context: context) ?? ""),
-                                    .img(.class("about-image-horizontal"), .src("../mo_conf_2019.jpg"))
+                                    .raw(markdownText(at: "Content/about/mo.md", context: context)),
+                                    .img(.class("about-image-horizontal"), .src("mo_conf_2019.jpg"))
                                 ),
                                 .br(),
                                 .div(
                                     .class("flex-container"),
-                                    .raw(markdownText(at: "Content/about/meetups.md", context: context) ?? ""),
-                                    .img(.class("about-image-horizontal"), .src("../talk.jpg"))
+                                    .raw(markdownText(at: "Content/about/meetups.md", context: context)),
+                                    .img(.class("about-image-horizontal"), .src("talk.jpg"))
                                 ),
-                                .h2("""
-                                        Public talk (hope soon I'll replace it with "talks") I've given 🎤
-                                    """),
-                                .raw(markdownText(at: "Content/about/talks.md", context: context) ?? "")
+                                .h2("Public talk I've given 🎤"),
+                                .header("Hope soon I'll replace it with \"talks"),
+                                .raw(markdownText(at: "Content/about/talks.md", context: context))
                             )
                         )
                     ),
@@ -90,7 +89,8 @@ public extension Theme {
             )
         }
         
-        func markdownText(at path: String, context: PublishingContext<Site>) -> String? {
+        private func markdownText(at path: String, context: PublishingContext<Site>) -> String {
+            let emptyString = ""
             do {
                 let path = Path(path)
                 let file = try context.file(at: path)
@@ -102,22 +102,11 @@ public extension Theme {
                     let html = parser.html(from: string)
                     return html
                 }
-                catch { return nil }
+                catch { return emptyString }
             } catch {
-                return nil
+                return emptyString
             }
         }
-        
-//        func floMarkdownText() -> String? {
-//            let file = "flo.md"
-//            guard let fileURL = Bundle.main.url(forResource: "flo", withExtension: "md") else { return nil }
-//            do {
-//                return try String(contentsOf: fileURL, encoding: .utf8)
-//            }
-//            catch {
-//                return nil
-//            }
-//        }
 
         func makeItemHTML(for item: Item<Site>,
                           context: PublishingContext<Site>) throws -> HTML {

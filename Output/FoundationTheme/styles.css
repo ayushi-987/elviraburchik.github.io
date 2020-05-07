@@ -1,6 +1,5 @@
 .flex-container {
   display: -webkit-flex;
-/*  -webkit-flex-wrap: nowrap;*/
   justify-content: space-between;
 }
 
