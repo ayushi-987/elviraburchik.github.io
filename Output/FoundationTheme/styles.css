@@ -82,6 +82,7 @@ p {
 .about-image-horizontal {
     margin-left: 30px;
     width: 400px;
+    height: 265px;
     flex: 0 0 auto;
 }
 
