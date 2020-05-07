@@ -29,7 +29,7 @@ public extension Theme {
                             .div(
                                 .contentBody(index.body)
                             ),
-                            .img(.class("avatar"), .src("../images/photo.png"))
+                            .img(.class("avatar"), .src("images/photo.png"))
                         )
                         /*
                          Uncomment when posts will appear
