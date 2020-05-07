@@ -79,7 +79,8 @@ public extension Theme {
                                 .header("Hope soon I'll replace it with \"talks\""),
                                 .br(),
                                 .raw(markdownText(at: "Content/about/talks.md", context: context))
-                            )
+                            ),
+                            else: .itemList(for: section.items, on: context.site)
                         )
                     ),
                     .footer(for: context.site)
