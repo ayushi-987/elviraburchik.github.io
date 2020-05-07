@@ -16,9 +16,8 @@ struct PersonalWebsite: Website {
     var name = "Elvira Burchik"
     var description = "Hi 👋 I'm Elvira Burchik"
     var language: Language { .english }
-    var imagePath: Path? { nil }
-    var socialMediaLinks: [SocialMediaLink] { [.twitter] }
+    var imagePath: Path? { Path("icon.png") }
 }
 
 try PersonalWebsite().publish(withTheme: .website,
-                                    deployedUsing: .gitHub("ElviraBurchik/elviraburchik.github.io", useSSH: false))
+                              deployedUsing: .gitHub("ElviraBurchik/elviraburchik.github.io", useSSH: false))
