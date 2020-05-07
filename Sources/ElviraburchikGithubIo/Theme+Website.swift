@@ -59,7 +59,7 @@ public extension Theme {
                                 .div(
                                     .class("flex-container"),
                                     .raw(markdownText(at: "Content/about/flo.md", context: context)),
-                                    .img(.class("about-image-vertical"), .src("../flo.png"))
+                                    .img(.class("about-image-vertical"), .src("../images/flo.png"))
                                 ),
                                 .h2("Event organization 🗓️"),
                                 .header("For some reason, I enjoy encouraging people to share their knowledge via public talks much more than speaking by myself, so 👇"),
@@ -67,13 +67,13 @@ public extension Theme {
                                 .div(
                                     .class("flex-container"),
                                     .raw(markdownText(at: "Content/about/mo.md", context: context)),
-                                    .img(.class("about-image-horizontal"), .src("../mo_conf_2019.png"))
+                                    .img(.class("about-image-horizontal"), .src("../images/mo_conf_2019.png"))
                                 ),
                                 .br(),
                                 .div(
                                     .class("flex-container"),
                                     .raw(markdownText(at: "Content/about/meetups.md", context: context)),
-                                    .img(.class("about-image-horizontal"), .src("../talk.png"))
+                                    .img(.class("about-image-horizontal"), .src("../images/talk.png"))
                                 ),
                                 .h2("Public talk I've given 🎤"),
                                 .header("Hope soon I'll replace it with \"talks\""),
