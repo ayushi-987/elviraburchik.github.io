@@ -17,6 +17,7 @@ struct PersonalWebsite: Website {
     var description = "Hi 👋 I'm Elvira Burchik"
     var language: Language { .english }
     var imagePath: Path? { "images/favicon.png" }
+    var favicon: Favicon? { Favicon(path: "/images/favicon.png") }
 }
 
 try PersonalWebsite().publish(withTheme: .website,
