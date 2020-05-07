@@ -75,9 +75,7 @@ public extension Theme {
                                     .raw(markdownText(at: "Content/about/meetups.md", context: context)),
                                     .img(.class("about-image-horizontal"), .src("../images/talk.png"))
                                 ),
-                                .h2("Public talk I've given 🎤"),
-                                .header("Hope soon I'll replace it with \"talks\""),
-                                .br(),
+                                .h2("Public speaking 🎤"),
                                 .raw(markdownText(at: "Content/about/talks.md", context: context))
                             ),
                             else: .itemList(for: section.items, on: context.site)
