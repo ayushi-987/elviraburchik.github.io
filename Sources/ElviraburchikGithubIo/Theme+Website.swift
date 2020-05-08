@@ -62,7 +62,7 @@ public extension Theme {
                                     .img(.class("about-image-vertical"), .src("../images/flo.png"))
                                 ),
                                 .h2("Event organization 🗓️"),
-                                .header("For some reason, I enjoy encouraging people to share their knowledge via public talks much more than speaking by myself, so 👇"),
+                                .header("I greatly enjoy encouraging people to share their knowledge via public talks much more than speaking by myself, so 👇"),
                                 .br(),
                                 .div(
                                     .class("flex-container"),
