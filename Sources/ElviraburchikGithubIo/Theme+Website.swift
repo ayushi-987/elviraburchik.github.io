@@ -55,7 +55,8 @@ public extension Theme {
                     .wrapper(
                         .if(section.title == "about",
                             .div(
-                                .contentBody(section.body),
+                                .contentBody(section.body),// Career
+                                .h2("Career 👩🏻‍💻"),
                                 .div(
                                     .class("flex-container"),
                                     .raw(markdownText(at: "Content/about/flo.md", context: context)),
@@ -73,10 +74,14 @@ public extension Theme {
                                 .div(
                                     .class("flex-container"),
                                     .raw(markdownText(at: "Content/about/meetups.md", context: context)),
-                                    .img(.class("about-image-horizontal"), .src("../images/talk.png"))
+                                    .img(.class("about-image-horizontal"), .src("../images/flo_meetup.png"))
                                 ),
                                 .h2("Public speaking 🎤"),
-                                .raw(markdownText(at: "Content/about/talks.md", context: context))
+                                .div(
+                                    .class("flex-container"),
+                                    .raw(markdownText(at: "Content/about/talks.md", context: context)),
+                                    .img(.class("about-image-horizontal"), .src("../images/talk.png"))
+                                )
                             ),
                             else: .itemList(for: section.items, on: context.site)
                         )

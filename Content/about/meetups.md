@@ -1,3 +1,3 @@
 Also, I organized two iOS-meetups:<br /><br />
-- [Flo iOS meetup #1: Design System](https://www.facebook.com/events/space-eventspaceby/flo-talks-design-system/624347684683566/)  
-- [Flo iOS meetup #2 with John Sundell](https://twitter.com/johnsundell/status/1232764016994459649)
+- **<a href="https://www.facebook.com/events/space-eventspaceby/flo-talks-design-system/624347684683566/" target="_blank" style="color:#4CA3DD">Flo iOS meetup #1: Design System</a>**<br />
+- **<a href="https://twitter.com/johnsundell/status/1232764016994459649" target="_blank" style="color:#4CA3DD">Flo iOS meetup #2 with John Sundell</a>**
