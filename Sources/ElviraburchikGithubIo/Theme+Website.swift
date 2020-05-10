@@ -55,31 +55,27 @@ public extension Theme {
                     .wrapper(
                         .if(section.title == "about",
                             .div(
-                                .contentBody(section.body),// Career
-                                .h2("Career 👩🏻‍💻"),
                                 .div(
                                     .class("flex-container"),
-                                    .raw(markdownText(at: "Content/about/flo.md", context: context)),
+                                    .div(.raw(markdownText(at: "Content/about/flo.md", context: context))),
                                     .img(.class("about-image-vertical"), .src("../images/flo.png"))
                                 ),
-                                .h2("Event organization 🗓️"),
-                                .header("I greatly enjoy encouraging people to share their knowledge via public talks much more than speaking by myself, so 👇"),
-                                .br(),
+                                .br(), .br(), .br(),
                                 .div(
                                     .class("flex-container"),
-                                    .raw(markdownText(at: "Content/about/mo.md", context: context)),
+                                    .div(.raw(markdownText(at: "Content/about/mo.md", context: context))),
                                     .img(.class("about-image-horizontal"), .src("../images/mo_conf_2019.png"))
                                 ),
-                                .br(),
+                                .br(), .br(),
                                 .div(
                                     .class("flex-container"),
                                     .raw(markdownText(at: "Content/about/meetups.md", context: context)),
                                     .img(.class("about-image-horizontal"), .src("../images/flo_meetup.png"))
                                 ),
-                                .h2("Public speaking 🎤"),
+                                .br(), .br(), .br(),
                                 .div(
                                     .class("flex-container"),
-                                    .raw(markdownText(at: "Content/about/talks.md", context: context)),
+                                    .div(.raw(markdownText(at: "Content/about/talks.md", context: context))),
                                     .img(.class("about-image-horizontal"), .src("../images/talk.png"))
                                 )
                             ),
