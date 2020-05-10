@@ -5,8 +5,8 @@
 
 .avatar {
     margin-left: 30px;
-    height: 200px;
     flex: 0 0 auto;
+    height: 300px;
 }
 
 * {
@@ -196,9 +196,9 @@ footer {
       justify-content: space-around;
     }
     
-/*    .about-image-horizontal {*/
-/*        margin-left: 0px;*/
-/*    }*/
+    .about-image-horizontal {
+        margin-left: 0px;
+    }
     
     nav li {
         margin: 0 15px;
