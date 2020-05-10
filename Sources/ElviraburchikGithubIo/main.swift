@@ -14,7 +14,7 @@ struct PersonalWebsite: Website {
 
     var url = URL(string: "https://elviraburchik.github.io")!
     var name = "Elvira Burchik"
-    var description = "Hi 👋 I'm Elvira Burchik"
+    var description = "Hi 👋"
     var language: Language { .english }
     var imagePath: Path? { "/images/favicon.png" }
     var favicon: Favicon? { Favicon(path: "/images/favicon.png") }
