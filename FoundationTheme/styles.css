@@ -183,6 +183,10 @@ footer {
 }
 
 @media(max-width: 600px) {
+    .about-image-vertical {
+        margin-left: 0px;
+    }
+    
     .wrapper {
         padding: 40px 20px;
     }
@@ -192,6 +196,10 @@ footer {
       justify-content: space-around;
     }
     
+/*    .about-image-horizontal {*/
+/*        margin-left: 0px;*/
+/*    }*/
+    
     nav li {
         margin: 0 15px;
     }
@@ -199,4 +207,5 @@ footer {
     .avatar {
         margin-left: 0px;
     }
+    
 }
