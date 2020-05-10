@@ -20,10 +20,6 @@ public extension Theme {
                 .body(
                     .header(for: context, selectedSection: nil),
                     .wrapper(
-                        .h1(
-                            .class("description")
-//                            .text(context.site.description)
-                        ),
                         .div(
                             .class("flex-container"),
                             .div(
